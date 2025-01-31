@@ -1,0 +1,228 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #333;
+    position: relative;
+    transition: background 0.5s, color 0.5s;
+    overflow-y: auto; /* Allow scrolling */
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #fff;
+}
+
+/* Background Animation */
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.theme-toggle i {
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+body.dark-mode .theme-toggle i {
+    color: #fff;
+}
+
+/* Container */
+.container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background 0.5s;
+}
+
+body.dark-mode .container {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+#cityInput {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #333;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+body.dark-mode #cityInput {
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+#searchBtn {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #ff6f61;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+#searchBtn:hover {
+    background: #ff3b2f;
+}
+
+/* Weather Card */
+.weather-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.weather-icon {
+    font-size: 70px;
+    margin: 15px 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.temperature {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.detail-item {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 12px;
+    border-radius: 10px;
+    transition: background 0.3s;
+    font-size: 14px;
+}
+
+body.dark-mode .detail-item {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.detail-item i {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+/* Autocomplete Dropdown */
+.autocomplete-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10;
+    display: none;
+}
+
+.autocomplete-dropdown div {
+    padding: 10px;
+    cursor: pointer;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+.autocomplete-dropdown div:hover {
+    background: #f0f0f0;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto; /* Ensure scrolling */
+    }
+
+    .container {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .temperature {
+        font-size: 34px;
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    #searchBtn {
+        width: 100%;
+        padding: 14px;
+    }
+}

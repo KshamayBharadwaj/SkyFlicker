@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyFlicker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="1.jpg" type="image/x-icon">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </div>
+
+    <!-- Background Animation -->
+    <div class="background" id="background"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1>Weather Dashboard</h1>
+        <div class="search-container">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+        </div>
+        <div id="autocompleteDropdown" class="autocomplete-dropdown"></div>
+
+        <!-- Weather Card -->
+        <div class="weather-card">
+            <i class="weather-icon" id="weatherIcon"></i>
+            <h2 id="cityName">-</h2>
+            <div class="temperature" id="temperature">-°C</div>
+            <div class="details">
+                <div class="detail-item">
+                    <i class="fas fa-tint"></i>
+                    <div>Humidity</div>
+                    <div id="humidity">-</div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-wind"></i>
+                    <div>Wind Speed</div>
+                    <div id="windSpeed">-</div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-thermometer-half"></i>
+                    <div>Feels Like</div>
+                    <div id="feelsLike">-</div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-sun"></i>
+                    <div>UV Index</div>
+                    <div id="uvIndex">-</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
