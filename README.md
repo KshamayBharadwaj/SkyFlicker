@@ -1,5 +1,3 @@
-# SkyFlicker
-
 # SkyFlicker 🌤️
 
 SkyFlicker is a **modern, animated, and visually stunning weather app** that provides real-time weather updates with dynamic backgrounds and a user-friendly interface. Built with **HTML**, **CSS**, and **JavaScript**, this app is designed to make checking the weather a delightful experience.
