@@ -15,14 +15,9 @@ SkyFlicker is a **modern, animated, and visually stunning weather app** that pro
 
 ## Screenshots 📸
 
-### Light Mode
-![Light Mode Screenshot](Desktop_Light.jpg)
+### Preview
+![Preview](Preview.jpg)
 
-### Dark Mode
-![Dark Mode Screenshot](Desktop_Dark.jpg)
-
-### Mobile View
-![Mobile Screenshot](Mobile.jpg)
 
 ---
 
